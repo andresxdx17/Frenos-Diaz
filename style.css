@@ -1,0 +1,302 @@
+body{
+    background-color: #100  ;
+    font-family: 'Open Sans', sans-serif;
+    }
+
+    .header::after {
+            content: " ";
+            color:rgb(248, 246, 246);
+            font-style: italic;
+            height: 100vh;
+            width: 100%;
+            background-image: url(./img/karsten-wurth-rafblRbne3o-unsplash.jpg);
+            background-size: cover;   
+            background-repeat: no-repeat;
+            background-position: center;
+            display: block; 
+            filter: blur(20px);
+            -webkit-filter: blur(20px);
+            transition: all 500ms;
+             
+        }
+
+
+          .header:hover::after {
+         filter: blur(5px);
+         -webkit-filter: blur(5px);
+          }
+
+
+    .logoimagen { 
+         position: absolute;
+         z-index: 1;
+         top: 230px;
+         left: 50%;
+         margin-top: 105px;
+         margin-left: -250px;
+         text-align: center;
+         width: 500px;
+         height: 550px;
+         transition: all 500ms;
+         
+    
+}
+    .logo {
+         height: 20vh;
+         width: 20vh;   
+        }
+  .title {
+        font-family: 'Cinzel', serif;
+        font-size: 4rem;
+        margin-top: 1rem;
+        text-align: center;
+        font-variant: unset;
+    }
+    .text {
+      font-family: 'Cinzel', serif;
+      color: rgb(14, 13, 13);
+      font-size: 1.7rem;
+      text-shadow: black;
+    }
+    .container {
+      max-width: 960px;
+      margin: auto;
+      overflow: hidden;
+      padding-top: 2rem;
+      padding: auto;
+    }
+
+    .texto-general{
+    color: aliceblue;
+    }
+
+    
+    .margen{
+      margin-top: 8rem;
+    }
+    .tiposservicios{
+     
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 35px;
+
+      
+    }
+    .services{
+      margin-top: 2rem;
+      margin-block-end: 2rem;
+    }
+    .h4{
+      margin-top: 2rem; 
+    }
+  
+  
+    .text-center{
+      text-align: center;
+    }
+    .grid-3{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 50px;
+    }
+    .grid-2{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 50px;
+    }
+
+    .about{
+      margin: auto;
+      text-align: center;
+      padding: 2rem;
+     
+    }
+
+   .footer{
+     margin-top: 50px;
+     padding: 0.5rem;
+
+   }
+
+  .image4{
+    height: 40vh;
+    width: 68vh;
+
+  
+  }
+  .image2{
+    height: 25vh;
+    width: 48vh;
+  }
+  .image3{
+       height: 35vh;
+       width: 55vh;
+  }
+  .garantía{
+    text-align: center;
+    width: 530px;
+    margin-top: 1rem;
+    margin-left: 200px;
+  }
+
+
+
+
+
+/* ======================== */
+/* General card styles */
+.card{
+  left: 0%;
+  position: center;
+  color: #fff;
+  text-align: center;
+  background-color: #151515; /*Background color of the card. We have to set one so the gradient background does not show through allowing for the border effect.*/
+  padding: 20px;
+  border-radius: 8x;
+  height: 300px;
+  width: 250px; 
+  
+
+}
+.image5{  
+  height: 40vh;
+  width: 68vh;
+}
+.card::before{
+  content: ''; /*Set the content property to an empty string, if you don't set a content the element won't show.*/
+  position: absolute; /*Allows for this element to be freely moved within the parent box that has relative position.*/
+  top: 0;
+  left: 0;
+  width: calc(100% + 8px); /* We make this element 100% of the card with and height and add 8px so make it slightly larger.*/
+  height: calc(100% + 8px);
+  transform: translate(-4px, -4px); /*Now we use a negative translation to center this element in terms of the card. We use half of the extra 8px we gave it for width and height.*/
+  background: linear-gradient(60deg, #5ff281, #5f86f2, #a65ff2, #f25fd0, #f25f61, #f2cb5f) 0 50%; /*You can use a gradient of your choosing. I generated this one online.*/
+  background-size: 300% 300%; /*Setting the background size to a large number since we will be animating the background position via keyframes.*/
+  animation:  gradient-animation 2.5s alternate infinite; /*Applying the keyframe animation.*/
+  border-radius: 8px; /*Rounds the corners a little.*/
+  z-index: -1; /*Sends the the gradient background to the back of the card.*/
+}
+.card-title{
+  font-size: 20px;
+  margin-block: 25px;
+  padding-bottom: 40px;
+}
+.card-plan{
+  font-size: 25px;
+  margin-block: 1px;
+}
+.card-button{
+  display: inline-table;
+  font-size: 14px;
+  color: #fff;
+  text-decoration: none;
+  border: 4px solid rgb(145, 96, 96);
+  border-radius: 20px;
+  padding: 5px 25px;
+}
+/* 
+  The keyframe animation will have one stop at 50% where we change the background position from the default value to 100% on the X axis and 50% on the Y.
+  We alternate this animation and make it infinite when we apply it to the element we want to animate. 
+*/
+@keyframes gradient-animation {
+  50%{
+      background-position: 100% 50%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+.mapa{
+  margin-top: 5rem;
+  margin-left: 14rem;
+  position: static;
+  grid: 1fr;
+}
+
+
+
+
+
+
+
+
+
+
+@media(max-width: 560px){
+  .header::after{
+    height: 50vh;
+    margin-top:0.5rem;
+  }
+  .header-content{
+    top: 5%;
+    margin-top: 5px;
+
+  }
+  .container{
+    max-width: 560px;
+    padding: 20px;
+  }
+  .logoimagen{
+    margin-top: 50px;
+    top: 60px;
+  }
+  .header-content .logo{
+    height: 100px;
+    width: 100px;
+  }
+  .grid-3, .grid-2 {
+    grid-template-columns: 1fr;
+    display: grid;
+  }
+  .services{
+     padding: 2rem;
+  }
+  .mapa{
+    margin-top: 5rem;
+    position: static;
+    grid: 1fr;
+    margin-left: 0;
+  }
+  
+  .about{
+    max-width: 530px;
+    margin-left: auto;
+    text-align: left;
+  }
+  .bg-white{
+    width: 560px;
+  }
+  .garantía{
+    text-align: center;
+    max-width: 470px;
+    margin-top: 1rem;
+    margin-left: 0px;
+  }
+  .image2{
+   margin-left: 70px;
+  
+  }
+  .image3{
+    margin-left: 60px;
+    
+   }
+   .image4{
+    margin-left: 5px;  
+   }
+   .image5{
+     display: none;
+   }
+    
+    
+    .card{
+     left: 30%;
+     margin-top: 3rem;
+   }
+ }
